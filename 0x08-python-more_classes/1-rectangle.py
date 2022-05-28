@@ -3,7 +3,10 @@
 
 
 class Rectangle:
-    """Class Rectangle with attributes"""
+    """Class Rectangle with attributes
+    Attirbutes:
+        - getter, setter with int
+        - getter, setter hight int"""
     def __init__(self, width=0, height=0):
         self.__width = width
         self.__height = height
