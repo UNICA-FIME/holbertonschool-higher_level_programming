@@ -8,8 +8,9 @@ class Rectangle:
         - getter, setter with int
         - getter, setter hight int"""
     def __init__(self, width=0, height=0):
-        self.__width = width
-        self.__height = height
+        """Representation the rectangle"""
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
@@ -19,7 +20,6 @@ class Rectangle:
     @width.setter
     def width(self, value):
         """change value of attribute self.__with"""
-
         if type(value) is not int:
             raise TypeError("width must be an integer")
         elif value < 0:
@@ -35,7 +35,6 @@ class Rectangle:
     @height.setter
     def height(self, value):
         """Change value of attribute self.__height"""
-
         if type(value) is not int:
             raise TypeError("height must be an integer")
         elif value < 0:
