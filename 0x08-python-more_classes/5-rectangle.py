@@ -1,0 +1,76 @@
+#!/usr/bin/python3
+"""Class Rectangle definition"""
+
+
+class Rectangle:
+    """Class Rectangle without attributes
+    Attirbutes:
+            - getter, setter width(int)
+            - getter and setter height(int)
+            - publics methos area and perimeter
+            - str method: string representation
+            - repr method: return string representation objetc
+            - del: print message"""
+
+    def __init__(self, width=0, height=0):
+        """Initializes the rectangle"""
+        self.width = width
+        self.height = height
+
+    @property
+    def width(self):
+        """getter for the private instance attribute width"""
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        """setter for the private instance attribute width"""
+        if type(value) != int:
+            raise TypeError("width must be an integer")
+        elif value < 0:
+            raise ValueError("width must be >= 0")
+        else:
+            self.__width = value
+
+    @property
+    def height(self):
+        """getter for the private instance attribute height"""
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        """setter for the private instance attribute height"""
+        if type(value) != int:
+            raise TypeError("height must be an integer")
+        elif value < 0:
+            raise ValueError("height must be >= 0")
+        else:
+            self.__height = value
+
+    def area(self):
+        """returns the area of the rectangle"""
+        return self.__height * self.__width
+
+    def perimeter(self):
+        """returns the perimeter of the rectangle"""
+        if self.__height == 0 or self.__width == 0:
+            return 0
+        else:
+            return 2 * self.__height + 2 * self.__width
+
+    def __str__(self):
+        """returns printable string representation of the rectangle"""
+        mgs = ""
+        for i in range(self.__height):
+            mgs += "#" * self.__height
+            if i != self.__height - 1:
+                mgs = "\n"
+        return mgs
+
+    def __repr__(self):
+        """returns a string representation of the rectangle for reproduction"""
+        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
+
+    def __del__(self):
+        """prints a string when an instance has been deleted"""
+        print("Bye rectangle...")
