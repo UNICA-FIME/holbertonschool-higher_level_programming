@@ -26,7 +26,7 @@ if __name__ == '__main__':
         exit(0)
     if argv[2] == '/':
         div_m = calculator_1.div(c, b)
-        print("{:d} - {:d} = {:d}".format(c, b, div_m))
+        print("{:d} / {:d} = {:d}".format(c, b, div_m))
         exit(0)
     else:
         print("Unknown operator. Available operators: +, -, * and /")
