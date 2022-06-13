@@ -43,3 +43,12 @@ NameError: name 'NaN' is not defined
 Traceback (most recent call last):
 ...
 TypeError: add_integer() takes 2 positional arguments but 3 were given
+
+>>> add_integer(666666666, 1234567)
+667901233
+
+>>> add_integer(False, 3)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
