@@ -29,3 +29,7 @@ True
 >>> add_integer(2.45, 3.1)
 5
 
+>>> add_integer(NaN, 12)
+Traceback (most recent call last):
+...
+NameError: name 'NaN' is not defined
