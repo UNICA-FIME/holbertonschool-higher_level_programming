@@ -8,4 +8,4 @@ if __name__ == "__main__":
         while (i < num_arg):
             sum_arg = sum_arg + int(argv[i])
             i += 1
-            stdout.write("{}\n".format(sum_arg))
+stdout.write("{}\n".format(sum_arg))
