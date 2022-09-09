@@ -10,6 +10,6 @@ if __name__ == "__main__":
         stdout.write("{:d}: {:s}\n".format(num_arg, argv[num_arg]))
     else:
         stdout.write("{:d} arguments:\n".format(num_arg))
-        while (i < num_arg):
-            stdout.write("{:d}: {}\n".format(i, argv[i + 1]))
+        while (i <= num_arg):
+            stdout.write("{:d}: {}\n".format(i, argv[i]))
             i += 1
