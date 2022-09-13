@@ -10,7 +10,7 @@ def add_tuple(tuple_a=(), tuple_b=()):
         x_1 = tuple_a[0]
         x_2 = 0
     elif (len(tuple_a) > 2):
-        tuple_a1 = taple_a[0:2]
+        tuple_a1 = tuple_a[0:2]
         x_1, x_2 = tuple_a1
     elif (len(tuple_a) == 0):
         x_1 = 0
