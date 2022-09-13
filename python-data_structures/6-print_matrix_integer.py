@@ -1,4 +1,4 @@
-#!/usr/bin/pythom3
+#!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
 
     for matrix_1 in matrix:
