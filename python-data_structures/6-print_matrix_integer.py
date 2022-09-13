@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
 
+    if (len(matrix) == 0):
+        return (1)
     for matrix_1 in matrix:
         count = len(matrix_1)
         t = 1
