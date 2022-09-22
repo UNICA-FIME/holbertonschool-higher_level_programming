@@ -12,8 +12,9 @@ class Square:
             raise ValueError("size must be >= 0")
         else:
             self.__size = size
-        if (type(position) is not tuple and type(position[0]) is not int
-                and type(position[1]) is not int or len(position) < 2):
+        if (len(position) != 2 or type(position) is not tuple
+                or type(position[0]) is not int or type(position[1]) is not int
+                or position[1] < 0 or position[0] < 0):
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = position
@@ -41,8 +42,9 @@ class Square:
     @position.setter
     def position(self, value):
         """This is a function write the privite instance attribute"""
-        if (type(value) is not tuple and type(value[0]) is not int
-                and type(value[1]) is not int and len(position) < 2):
+        if (len(value) != 2 or type(value) is not tuple
+                or type(value[0]) is not int or type(value[1]) is not int
+                or value[1] < 0 or value[0] < 0):
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = value
