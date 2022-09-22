@@ -47,10 +47,10 @@ class Square:
         else:
             self.__position = value
 
-        def area(self):
-            """This is a function the calculate the area square"""
-            self.are = self.__are**2
-            return (self.area)
+    def area(self):
+        """This is a function the calculate the area square"""
+        self.area = self.__size**2
+        return (self.area)
 
     def my_print(self):
         """This is function print square of #"""
