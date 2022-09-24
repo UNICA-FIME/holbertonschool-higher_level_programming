@@ -51,4 +51,4 @@ Now use it:
     >>> add_integer(float('inf'), 0.2)
     Traceback (most recent call last):
       ...
-    TypeError: a must be an integer
+    OverflowError: cannot convert float infinity to integer
