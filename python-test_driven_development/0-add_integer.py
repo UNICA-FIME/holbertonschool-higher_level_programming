@@ -2,7 +2,6 @@
 """ This is module implement function
 for adds 2 integers.
 """
-import doctest
 
 
 def add_integer(a, b=98):
@@ -24,7 +23,3 @@ def add_integer(a, b=98):
     if (type(b) is float):
         b = int(b)
     return (a + b)
-
-
-if __name__ == '__main__':
-    doctest.testfile('tests/0-add_integer.txt')
