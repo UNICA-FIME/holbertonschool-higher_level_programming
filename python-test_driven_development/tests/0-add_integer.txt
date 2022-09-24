@@ -52,7 +52,7 @@ Now use it:
     Traceback (most recent call last):
       ...
     OverflowError: cannot convert float infinity to integer
-    >>> add_integer(float('juan'), 0.2)
+    >>> add_integer(float('nan'), 0.2)
     Traceback (most recent call last):
       ...
     ValueError: cannot convert float NaN to integer
