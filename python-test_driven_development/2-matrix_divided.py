@@ -6,18 +6,17 @@ splits the elements of an array
 
 def matrix_divided(matrix, div):
     """This is function fot div the element of matrix"""
-    len_1 = len(matrix[0])
-    if (type(matrix) is not list):
+    if (not matrix or type(matrix[0]) != list):
         raise TypeError('''matrix must be a matrix (list of lists) \
 of integers/floats''')
     for i in matrix:
-        if (type(i) is not list):
+        if (type(i) is not list or len(i) == 0):
             raise TypeError('''matrix must be a matrix (list of lists) \
 of integers/floats''')
-        elif (len(i) != len_1):
+        if (len(i) != len(matrix[0])):
             raise TypeError("Each row of the matrix must have the same size")
         for j in i:
-            if (type(j) not in (int, float)):
+            if (type(j) not in (int, float) or j != j):
                 raise TypeError('''matrix must be a matrix (list of lists) \
 of integers/floats''')
     if (type(div) not in (int, float)):
