@@ -94,4 +94,7 @@ class Rectangle:
         and nicely printable string representation of an instance
 
         """
-        return ("\n".join("#" * self.__width for i in range(self.__height)))
+        if (self.__width == 0 or self.__height == 0):
+            return("")
+        else:
+            return "\n".join("#" * self.__width for i in range(self.__height))
