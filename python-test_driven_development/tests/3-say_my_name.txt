@@ -18,8 +18,8 @@ My name is  Garay
 
 varify if there is empety string
 --------------------------------
->>> say_my_name("", "")
-My name is  
+>>> say_my_name("","")
+My name is 
 
 None in the second position
 -----------------------------
