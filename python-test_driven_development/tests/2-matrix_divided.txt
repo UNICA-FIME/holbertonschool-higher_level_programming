@@ -39,14 +39,6 @@ None in the matrix
     ...
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
-float("nan") in the matrix
------------------------------
-    >>> matrix = [[1.5, 2, 3], [4, 2, float("nan")]]
-    >>> matrix_divided(matrix, 3)
-    Traceback (most recent call last):
-    ...
-    TypeError: matrix must be a matrix (list of lists) of integers/floats
-
 string in the matrix
 -----------------------------
     >>> matrix = [[1.5, "2", 3], [4, 2, 3]]
@@ -70,26 +62,6 @@ Boolean for the div
     Traceback (most recent call last):
     ...
     TypeError: div must be a number
-
-vacue matrix
------------------------------
-    >>> matrix = [[], [], []]
-    >>> matrix_divided(matrix, 2)
-    Traceback (most recent call last):
-    ...
-    TypeError: matrix must be a matrix (list of lists) of integers/floats
-
-    >>> matrix = []
-    >>> matrix_divided(matrix, 2)
-    Traceback (most recent call last):
-    ...
-    TypeError: matrix must be a matrix (list of lists) of integers/floats
-
-    >>> matrix = [[]]
-    >>> matrix_divided(matrix, 2)
-    Traceback (most recent call last):
-    ...
-    TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 number in the rows in the matrix (must be lists)
 -----------------------------
