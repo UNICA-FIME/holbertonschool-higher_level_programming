@@ -48,3 +48,10 @@ list in the first position
 Traceback (most recent call last):
 ...
 TypeError: first_name must be a string
+
+SyntaxError
+-----------------------------
+>>> say_my_name(,)
+Traceback (most recent call last):
+...
+SyntaxError: invalid syntax
