@@ -1,0 +1,46 @@
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+varify if there are two strings
+-------------------------------
+>>> say_my_name('Juan', 'Garay')
+My name is Juan Garay
+
+varify if there is one string
+-----------------------------
+>>> say_my_name('Juan',)
+My name is Juan 
+
+varify if there is empety string
+--------------------------------
+>>> say_my_name('', 'Garay')
+My name is  Garay
+
+
+None in the second position
+-----------------------------
+>>> say_my_name("Juan", None)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+
+None in the first position
+-----------------------------
+>>> say_my_name(None, "Garay")
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+number in the first position
+-----------------------------
+>>> say_my_name(1231, None)
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+list in the first position
+-----------------------------
+>>> say_my_name(["Juan"], "Garay")
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
