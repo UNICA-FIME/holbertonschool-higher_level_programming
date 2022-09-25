@@ -23,7 +23,7 @@ My name is
 
 varify if missing two arguments
 -------------------------------
->>> say_my_name("",)
+>>> say_my_name("", )
 My name is  
 
 None in the second position
