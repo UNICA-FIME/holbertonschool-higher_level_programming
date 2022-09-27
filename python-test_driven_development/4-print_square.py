@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+"""This module print square"""
+
+
 def print_square(size):
+    """This function print area square with #"""
     if (type(size) is not int):
         raise TypeError("size must be an integer")
     elif (size < 0):
