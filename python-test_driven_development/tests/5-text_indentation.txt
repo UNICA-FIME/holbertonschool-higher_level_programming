@@ -16,6 +16,11 @@ juan?
 <BLANKLINE>
 carlos
 
+>>> text_indentation("juan.carlos")
+juan.
+<BLANKLINE>
+carlos
+
 >>> text_indentation(5)
 Traceback (most recent call last):
 ...
