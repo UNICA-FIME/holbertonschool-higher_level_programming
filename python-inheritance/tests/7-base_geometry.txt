@@ -1,0 +1,15 @@
+This is a doctes
+-----------------
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("Juan", 1.0)
+Traceback (most recent call last):
+...
+TypeError: Juan must be an integer
+
+>>> bg.integer_validator("Juan", -1)
+Traceback (most recent call last):
+... 
+ValueError: Juan must be greater than 0
