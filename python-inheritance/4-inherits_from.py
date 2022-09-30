@@ -11,7 +11,7 @@ def inherits_from(obj, a_class):
       a_class: This is a parameter type class
     """
 
-    if (type(obj) is a_class):
+    if (type(obj) == a_class):
         return False
-    if (isinstance(obj, a_class) is True):
-        return True
+    else:
+        return(issubclass(type(obj), a_class))
