@@ -33,3 +33,21 @@ TypeError: Juan must be an integer
 Traceback (most recent call last):
 ...
 TypeError: Juan must be an integer
+
+>>> bg.integer_validator("Juan", {3, 4})
+Traceback (most recent call last):
+...
+TypeError: Juan must be an integer
+
+>>> bg.integer_validator("Juan", (4,))
+Traceback (most recent call last):
+...
+TypeError: Juan must be an integer
+
+>>> bg.integer_validator("Juan", 0)
+Traceback (most recent call last):
+...
+ValueError: Juan must be greater than 0
+
+>>> bg.integer_validator("Juan", 5)
+
