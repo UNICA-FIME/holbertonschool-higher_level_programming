@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """This is a module create a method"""
-import json
 
 
 def class_to_json(obj):
