@@ -61,35 +61,6 @@ class TestBase(unittest.TestCase):
         self.assertCountEqual(Base.to_json_string(o1_6), '[[1, 2, 3]]')
         self.assertCountEqual(Base.to_json_string(o1_7), '[]')
 
-    def test_from_json_string(self):
-        """Testing from_json_string(), uses to_json_string to format,
-        anything not in format should return []
-        """
-
-        o2_1 = [{"hi": 1, "yo": "hol"}]
-        r2_1 = Base.to_json_string(o2_1)
-        o2_2 = [{"hello": 3}]
-        r2_2 = Base.to_json_string(o2_2)
-        o2_3 = None
-        r2_3 = Base.to_json_string(o2_3)
-        o2_4 = "a string"
-        r2_4 = Base.to_json_string(o2_4)
-        o2_5 = 123
-        o2_6 = [[1, 2, 3]]
-        r2_6 = Base.to_json_string(o2_6)
-        o2_7 = []
-        r2_7 = Base.to_json_string(o2_7)
-
-        self.assertEqual(Base.from_json_string(r2_1), o2_1)
-        self.assertEqual(Base.from_json_string(r2_2), o2_2)
-        self.assertEqual(Base.from_json_string(r2_3), [])
-        self.assertEqual(Base.from_json_string(r2_4), o2_4)
-        self.assertEqual(Base.from_json_string(o2_5), [])
-        self.assertEqual(Base.from_json_string(r2_6), o2_6)
-        self.assertEqual(Base.from_json_string(r2_7), o2_7)
-        self.assertEqual(Base.from_json_string(o2_1), [])
-        self.assertEqual(Base.from_json_string(o2_3), [])
-        self.assertEqual(Base.from_json_string(o2_7), [])
 
     def test_create(self):
         """Testing create()
