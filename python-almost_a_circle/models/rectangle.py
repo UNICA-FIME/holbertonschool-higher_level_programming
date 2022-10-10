@@ -86,3 +86,28 @@ class Rectangle(Base):
             msg += pos_x + "#" * self.width + "\n"
         print(msg, end="")
         return msg
+
+    def __str__(self) -> str:
+        """string representation method"""
+        return "[Rectangle] ({0}) {1}/{2} - {3}/{4}".format(
+            self.id, self.x, self.y, self.width, self.height
+        )
+
+    def update(self, *args, **kwargs):
+        """assigns an argument to each attribute"""
+
+        attr = ["id", "width", "height", "x", "y"]
+        if len(args) != 0:
+            for key, value in zip(attr, args):
+                setattr(self, key, value)
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+
+    def to_dictionary(self):
+        """Dictionary representation"""
+
+        attr = ["id", "width", "height", "x", "y"]
+        r_dict = {key: getattr(self, key) for key in attr}
+
+        return r_dict
