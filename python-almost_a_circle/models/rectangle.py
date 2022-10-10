@@ -77,3 +77,12 @@ class Rectangle(Base):
     def area(self):
         """Calculate the are of the rectangle"""
         return self.height * self.width
+
+    def display(self):
+        """that prints in stdout the square with the character #:"""
+        msg = "\n" * self.y
+        for y in range(self.height):
+            pos_x = " " * self.x
+            msg += pos_x + "#" * self.width + "\n"
+        print(msg, end="")
+        return msg
