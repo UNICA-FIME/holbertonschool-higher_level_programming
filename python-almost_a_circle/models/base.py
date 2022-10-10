@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """This is a module that create a type class"""
+import json
 
 
 class Base(object):
