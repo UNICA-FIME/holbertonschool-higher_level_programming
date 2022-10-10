@@ -9,14 +9,14 @@ class TestBaseClass(unittest.TestCase):
     """
     Testing Base
     """
-   def test_positive_numbers(self):
-        """test number more or equal greather than zero"""
-        base1 = Base(1)
-        self.assertEqual(base1.id, 1)
-        base2 = Base(2)
-        self.assertEqual(base2.id, 2)
-        base3 = Base(0)
-        self.assertEqual(base3.id, 0)
+    def test_positive_numbers(self):
+       """test number more or equal greather than zero"""
+       base1 = Base(1)
+       self.assertEqual(base1.id, 1)
+       base2 = Base(2)
+       self.assertEqual(base2.id, 2)
+       base3 = Base(0)
+       self.assertEqual(base3.id, 0)
 
     def test_none_value(self):
         """None value to id"""
