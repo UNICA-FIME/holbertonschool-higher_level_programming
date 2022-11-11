@@ -14,4 +14,4 @@ if __name__ == '__main__':
     list_obj = list(cur)
     for item in range(0, len_obj):
         if list_obj[item][1] == sys.argv[4]:
-            print("({}, {})".format(list_obj[item][0], list_obj[item][1]))
+            print("({}, '{}')".format(list_obj[item][0], list_obj[item][1]))
