@@ -20,3 +20,5 @@ if __name__ == "__main__":
             print("{}".format(query_row[item][0]), end=", ")
     if (item != 0):
         print("{}".format(query_row[item][0]))
+    else:
+        print()
