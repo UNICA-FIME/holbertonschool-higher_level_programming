@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-'''
+"""
 db_connection establece la conexion con la base de datos.
 cursor crea un cursor para interactuar con la base de datos
 cursor_leng muesta la contidad de item que tiene el objeto
 list_1 convierte el objeto en un lista iterable
 
-'''
+"""
 import sys
 import MySQLdb
 
