@@ -14,7 +14,9 @@ if __name__ == "__main__":
              INNER JOIN cities ON states.id=cities.state_id \
              WHERE states.name=%s ORDER BY cities.id", (sys.argv[4],))
     query_row = cur.fetchall()
+    item = 0
     for item in range(0, len(query_row)):
         if item < len(query_row)-1:
             print("{}".format(query_row[item][0]), end=", ")
-    print("{}".format(query_row[item][0]))
+    if (item != 0):
+        print("{}".format(query_row[item][0]))
