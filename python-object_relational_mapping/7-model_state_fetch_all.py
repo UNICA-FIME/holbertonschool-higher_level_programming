@@ -6,7 +6,8 @@ session: es una instancia de mi clase.
 session.query(State).order_by(State.id).all()
  session.query(State): es igual que el SELECT en sql
  session.query(State).order_by(State.id): ordena por id
- session.query(State).order_by(State.id).all(): selecciona todo la columna y ordena.
+ session.query(State).order_by(State.id).all(): selecciona
+                                                todo la columna y ordena.
 """
 
 if __name__ == '__main__':
@@ -16,7 +17,7 @@ if __name__ == '__main__':
     from sqlalchemy.orm import sessionmaker
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
                            .format(sys.argv[1], sys.argv[2], sys.argv[3]),
-                            pool_pre_ping=True)
+                           pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
     q = session.query(State).order_by(State.id).all()
