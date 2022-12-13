@@ -1,11 +1,14 @@
 #!/usr/bin/node
-const argv = process.argv;
-const x = parseInt(argv[2]);
-const character = 'X';
-if (isNaN(x)) {
+const { argv } = require('process');
+const number = parseInt(argv[2]);
+if (!number) {
   console.log('Missing size');
 } else {
-  for (let i = 0; i < x; i++) {
-    console.log(character.repeat(x));
+  for (let i = 0; i < number; i++) {
+    let concat = '';
+    for (let j = 0; j < number; j++) {
+      concat += 'X';
+    }
+    console.log(concat);
   }
 }
