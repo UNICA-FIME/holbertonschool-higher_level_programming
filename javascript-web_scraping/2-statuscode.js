@@ -1,6 +1,6 @@
-#!/usr/bin/node
+#!/onin/node
 const request = require('request');
 const url = process.argv[2];
-request((url), function ( error, response) {
+request(url, function (error, response, body) {
   console.log('code: ', response && response.statusCode);
 });
