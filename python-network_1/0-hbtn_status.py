@@ -14,3 +14,5 @@ if __name__ == "__main__":
     print(f"\t- content: {html}")
     if list_if[1] == 'utf-8':
         print("\t- utf8 content: {0}".format('OK'))
+    else:
+        print("\t- utf8 content: {0}".format(str(html)[2:-1]))
