@@ -8,4 +8,5 @@ if __name__ == "__main__":
     import urllib.request
     with urllib.request.urlopen(sys.argv[1]) as response:
         html = dict(response.headers)
-    print(html['X-Request-Id'])
+    if 'X-Request-Id' in html.keys():
+        print(html['X-Request-Id'])
